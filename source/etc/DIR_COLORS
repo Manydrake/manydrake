@@ -1,0 +1,288 @@
+# Configuration file for dircolors, a utility to help you set the
+# LS_COLORS environment variable used by GNU ls with the --color option.
+
+# Copyright (C) 1996-2016 Free Software Foundation, Inc.
+# Copying and distribution of this file, with or without modification,
+# are permitted provided the copyright notice and this notice are preserved.
+
+# The keywords COLOR, OPTIONS, and EIGHTBIT (honored by the
+# slackware version of dircolors) are recognized but ignored.
+
+# This file goes in the /etc directory, and must be world readable.
+# You can copy this file to .dir_colors in your $HOME directory to override
+# the system defaults.
+
+# Below are TERM entries, which can be a glob patterns, to match
+# against the TERM environment variable to determine if it is colorizable.
+TERM Eterm
+TERM ansi
+TERM color-xterm
+TERM con[0-9]*x[0-9]*
+TERM cons25
+TERM console
+TERM cygwin
+TERM dtterm
+TERM eterm-color
+TERM gnome
+TERM gnome-256color
+TERM hurd
+TERM jfbterm
+TERM konsole
+TERM kterm
+TERM linux
+TERM linux-c
+TERM mach-color
+TERM mach-gnu-color
+TERM mlterm
+TERM putty
+TERM putty-256color
+TERM rxvt*
+TERM screen*
+TERM st
+TERM st-256color
+TERM terminator
+TERM tmux*
+TERM vt100
+TERM xterm*
+
+# Below are the color init strings for the basic file types. A color init
+# string consists of one or more of the following numeric codes:
+# Attribute codes:
+# 00=none 01=bold 04=underscore 05=blink 07=reverse 08=concealed
+# Text color codes:
+# 30=black 31=red 32=green 33=yellow 34=blue 35=magenta 36=cyan 37=white
+# Background color codes:
+# 40=black 41=red 42=green 43=yellow 44=blue 45=magenta 46=cyan 47=white
+# For compatible terminal to xterm you can use 256 color, text escape code
+# 38;5;colorN , background escape code 48;5;colorN .
+NORMAL 38;5;48	# no color code at all
+FILE 38;5;255	# regular file: use no color at all
+RESET 0		# reset to "normal" color
+DIR 01;38;5;38	# directory
+LINK 38;5;167	# symbolic link.  (If you set this to 'target' instead of a
+                # numerical value, the color is as for the file pointed to.)
+MULTIHARDLINK 00	# regular file with more than one link
+FIFO 40;33	# pipe
+SOCK 01;35	# socket
+DOOR 01;35	# door
+BLK 40;33;01	# block device driver
+CHR 40;33;01	# character device driver
+ORPHAN 01;05;37;41 # symlink to nonexistent file, or non-stat'able file ...
+MISSING 01;05;37;41 # ... and the files they point to
+SETUID 37;41	# file that is setuid (u+s)
+SETGID 30;43	# file that is setgid (g+s)
+CAPABILITY 30;41	# file with capability
+STICKY_OTHER_WRITABLE 30;42 # dir that is sticky and other-writable (+t,o+w)
+OTHER_WRITABLE 34;42 # dir that is other-writable (o+w) and not sticky
+STICKY 37;44	# dir with the sticky bit set (+t) and not other-writable
+
+# This is for files with execute permission:
+EXEC 01;38;5;214
+
+# List any file extensions like '.gz' or '.tar' that you would like ls
+# to colorize below. Put the extension, a space, and the color init string.
+# (and any comments you want to add after a '#')
+
+# If you use DOS-style suffixes, you may want to uncomment the following:
+.cmd 01;32 # executables (bright green)
+.exe 01;32
+.com 01;32
+.btm 01;32
+.bat 01;32
+# Or if you want to colorize scripts even if they do not have the
+# executable bit actually set.
+.sh  01;32
+.csh 01;32
+
+ # archives or compressed (bright red)
+.tar 01;31
+.tgz 01;31
+.arc 01;31
+.arj 01;31
+.taz 01;31
+.lha 01;31
+.lz4 01;31
+.lzh 01;31
+.lzma 01;31
+.tlz 01;31
+.txz 01;31
+.tzo 01;31
+.t7z 01;31
+.zip 01;31
+.z   01;31
+.Z   01;31
+.dz  01;31
+.gz  01;31
+.lrz 01;31
+.lz  01;31
+.lzo 01;31
+.xz  01;31
+.bz2 01;31
+.bz  01;31
+.tbz 01;31
+.tbz2 01;31
+.tz  01;31
+.deb 01;31
+.rpm 01;31
+.jar 01;31
+.war 01;31
+.ear 01;31
+.sar 01;31
+.rar 01;31
+.alz 01;31
+.ace 01;31
+.zoo 01;31
+.cpio 01;31
+.7z  01;31
+.rz  01;31
+.cab 01;31
+.iso 01;31
+
+# image formats
+.jpg 01;35
+.jpeg 01;35
+.JPG 01;35
+.JPEG 01;35
+.gif 01;35
+.bmp 01;35
+.pbm 01;35
+.pgm 01;35
+.ppm 01;35
+.tga 01;35
+.xbm 01;35
+.xpm 01;35
+.tif 01;35
+.tiff 01;35
+.png 01;35
+.ico 01;35
+.svg 01;35
+.svgz 01;35
+.mng 01;35
+.pcx 01;35
+.mov 01;35
+.mpg 01;35
+.mpeg 01;35
+.m2v 01;35
+.mkv 01;35
+.webm 01;35
+.ogm 01;35
+.divx 01;35
+.xvid 01;35
+.3gp 01;35
+.mp4 01;35
+.m4v 01;35
+.mp4v 01;35
+.vob 01;35
+.qt  01;35
+.nuv 01;35
+.wmv 01;35
+.asf 01;35
+.rm  01;35
+.rmvb 01;35
+.flc 01;35
+.avi 01;35
+.fli 01;35
+.flv 01;35
+.gl 01;35
+.dl 01;35
+.xcf 01;35
+.xwd 01;35
+.yuv 01;35
+.cgm 01;35
+.emf 01;35
+.gem 01;35
+
+# http://wiki.xiph.org/index.php/MIME_Types_and_File_Extensions
+.ogv 01;35
+.ogx 01;35
+
+# audio formats
+.aac 00;36
+.au 00;36
+.flac 00;36
+.m4a 00;36
+.mid 00;36
+.midi 00;36
+.mka 00;36
+.mp3 00;36
+.mpc 00;36
+.ogg 00;36
+.ra 00;36
+.wav 00;36
+
+# http://wiki.xiph.org/index.php/MIME_Types_and_File_Extensions
+.oga 00;36
+.opus 00;36
+.spx 00;36
+.xspf 00;36
+
+.mp2 00;36
+.mod 00;36
+.xm 00;36
+.s3m 00;36
+.it 00;36
+.wma 00;36
+
+# document and various text(ish) formats
+.txt 38;5;1
+.lyx 38;5;1
+.doc 38;5;1
+.wri 38;5;1
+.odt 38;5;1
+.wpd 38;5;1
+.abw 38;5;1
+.rtf 38;5;1
+.sam 38;5;1
+.pdb 38;5;1
+.sxw 38;5;1
+.kwd 38;5;1
+.sgml 38;5;1
+.html 38;5;1
+.htm 38;5;1
+.wml 38;5;1
+.xml 38;5;1
+.pdf 38;5;1
+.ps 38;5;1
+.man 38;5;1
+.info 38;5;1
+.tex 38;5;1
+.conf 38;5;1
+.cnf 38;5;1
+.cfg 38;5;1
+.config 38;5;1
+.ini 38;5;1
+.spec 38;5;1
+.log 38;5;1
+.c 38;5;1
+.cpp 38;5;1
+.cxx 38;5;1
+.h 38;5;1
+.hpp 38;5;1
+.java 38;5;1
+.pl 38;5;1
+.py 38;5;1
+.patch 38;5;1
+*rc 38;5;1
+*README 38;5;1
+*COPYING 38;5;1
+*ChangeLog 38;5;1
+*NEWS 38;5;1
+*AUTHORS 38;5;1
+*ABOUT-NLS 38;5;1
+*THANKS 38;5;1
+*TODO 38;5;1
+*FAQ 38;5;1
+*INSTALL 38;5;1
+*CHANGES 38;5;1
+
+# backup formats
+*~ 38;5;243
+.bak 38;5;243
+.swp 38;5;243
+.bck 38;5;243
+.bk 38;5;243
+.old 38;5;243
+.tmp 38;5;243
+.save 38;5;243
+.rpmsave 38;5;243
+.rpmnew 38;5;243
